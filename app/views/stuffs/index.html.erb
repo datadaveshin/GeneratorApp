@@ -1,0 +1,22 @@
+<h2>Stuffs</h2>
+
+<p id="notice"><%= notice %></p>
+
+<hr>
+
+<div class="content">
+  <% @stuffs.each do |stuff| %>
+    <div>
+      <p><%= stuff.title %></p>
+      <p><%= stuff.description %></p>
+      <p><%= link_to 'Show', stuff %></p>
+      <p><%= link_to 'Edit', edit_stuff_path(stuff) %></p>
+      <p><%= link_to 'Destroy', stuff, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+</div>
+
+
+<br>
+
+<%= link_to 'New Stuff', new_stuff_path %>
